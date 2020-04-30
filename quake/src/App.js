@@ -5,16 +5,19 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import Register from './components/Register';
 import Login from './components/Login'
+import Contact from './components/Contact';
+import Nav from './components/Nav';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
-      <h1>Quake!</h1>
-     <Router>
-
-
-       <Route exact path = '/register' component ={Register}/>
+      <Router>
+        <Route exact path = '/'component = {Home}/>
+        <Route exact path = '/register' component ={Register}/>
        <Route exact path = '/login' component ={Login}/>
+       <Route exact path = '/contact' component ={Contact}/>
+
 
      </Router>
     </div>

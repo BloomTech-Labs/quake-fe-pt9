@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import Header from './Header';
 import Footer from './Footer';
+import Login from './Login';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
      
       <div className="img-div">
         <img src="https://www.futurity.org/wp/wp-content/uploads/2012/09/earthquakes_525.png" />
+        <Login/>
       </div>
       <h1>Preparedness</h1>
 

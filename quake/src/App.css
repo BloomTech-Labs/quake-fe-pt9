@@ -1,6 +1,30 @@
 .App {
   text-align: center;
 }
+.reg-div{
+
+  background-color: sienna;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.reg-form{
+   /* display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; */
+  border: 4px solid orange;
+  padding: 60px;
+  margin: 40px;
+  width:80%;
+  height: 100%;
+
+}
+.reg-form input {
+  margin: 20px;
+  padding: 5px;
+}
 
 .login-form{
   /* display: flex;
@@ -20,7 +44,7 @@
 .login-form h3{
   color:white;
 }
- .enter{
+ button{
   border: 4px solid orange;
   border-radius: 15px;
   background-color: peru;
@@ -31,7 +55,7 @@
   font-size: 20px;
 
 }
-.enter:hover{
+button:hover{
   background-color: white;
   color: peru;
 }

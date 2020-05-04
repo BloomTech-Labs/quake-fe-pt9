@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Header from './Header';
+import Footer from './Footer';
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
@@ -34,9 +36,10 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div className = 'reg-div'> 
+    <Header/>
       <h1>Register</h1>
-      <form type="submit" onSubmit={onSubmit}>
+      <form className = 'reg-form'type="submit" onSubmit={onSubmit}>
         <input
           type="text"
           name="first_name"
@@ -86,7 +89,8 @@ const Register = () => {
 
         <button type = 'submit' onSubmit = {onSubmit}>Enter</button>
       </form>
-    </>
+      <Footer/>
+      </div>
   );
 };
 

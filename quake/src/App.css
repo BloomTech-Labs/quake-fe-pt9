@@ -1,38 +1,129 @@
 .App {
   text-align: center;
 }
+.reg-div{
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  background-color: sienna;
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.reg-form{
+   /* display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; */
+  border: 4px solid orange;
+  padding: 60px;
+  margin: 40px;
+  width:80%;
+  height: 100%;
+
+}
+.reg-form input {
+  margin: 20px;
+  padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form{
+  /* display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; */
+  border: 4px solid orange;
+  padding: 60px;
+  margin: 40px;
+  width:30%;
+  height: 100%;
 }
+ .login-form input{
+   margin: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.login-form h3{
+  color:white;
+}
+ button{
+  border: 4px solid orange;
+  border-radius: 15px;
+  background-color: peru;
+  color: wheat;
+  padding: 7px;
+  width: 50%;
+  margin: 10px;
+  font-size: 20px;
+
+}
+button:hover{
+  background-color: white;
+  color: peru;
+}
+  
+ .home {
+   background-color: sienna;
+   display:flex;
+   flex-direction: column;
+ }
+ .nav{
+   border: 4px solid orange;
+   padding:15px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   
+ }
+ .navie{
+   color: white;
+   font-size:25px;
+   margin: 10px;
+ }
+ .small-nav{
+   color: wheat;
+ }
+  
+ .epi{
+   font-size: 40px;
+   color: white;
+ }
+
+  .img-div{
+    display:flex;
+    justify-content: center;
+    margin:50px;
+     width:100%;
+     border-radius: 17px;
+     align-content: center;
+    
+  }
+   .img-div img{
+    border:4px solid orange;
+      
+  }
+  .footer{
+    color: white;
+    font-size:15px;
+    border: 4px solid orange;
+    padding:10px;
+  }
+
+  .prepare{
+
+    display:flex;
+     width:100%;
+    justify-content: center;
+    align-content: center;
+  }
+ .p-div{
+  display:flex;
+  width: 80%;
+  margin:20px;
+  align-content: center;
+  }
+  .header {
+    border : 3 px solid yellow;
+  }
+
+ 
+  
+ 

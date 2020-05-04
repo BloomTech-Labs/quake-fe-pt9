@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import {NavLink} from 'react-router-dom';
+
 import axios from "axios";
 
 const Login = () => {
@@ -31,8 +33,9 @@ const Login = () => {
 
   return (
     <>
-      <h1>Login to Quake</h1>
-      <form className="login-form" type="submit" onSubmit={onSubmit}>
+       <form className="login-form" type="submit" onSubmit={onSubmit}>
+      <h3>Login to Epicenter</h3>
+
         <input
           type="text"
           value={user.email}
@@ -47,7 +50,10 @@ const Login = () => {
           onChange={handleInput}
           placeholder="password"
         />
-        <button type="submit">Enter</button>
+        <button className = 'enter' type="submit">Enter</button>
+        <h3>Not Registered?</h3>
+        <NavLink className = 'small-nav' to = "/register">Register</NavLink>
+
       </form>
      </>
   );

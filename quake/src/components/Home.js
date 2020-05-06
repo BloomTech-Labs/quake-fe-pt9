@@ -13,7 +13,7 @@ const Home = () => {
       
       <div className="img-div">
         <WorldMap />
-        <Login />
+        {/* <Login /> */}
       </div>
       <h1>Preparedness</h1>
 

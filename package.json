@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "leaflet": "^1.6.0",
-    "react-leaflet": "^2.6.3"
-  }
-}

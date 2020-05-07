@@ -3,6 +3,8 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import {NavLink} from 'react-router-dom';
 
 import axios from "axios";
+import Header from "./Header";
+import Footer from "./Footer"
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -31,8 +33,15 @@ const Login = () => {
     });
   };
 
+// Temporary style to view content, remove once we style components
+  let loginStyle = {
+    background: 'orange',
+    color: 'black'
+  }
+
   return (
-    <>
+    < div style={loginStyle}>
+    <Header/>
        <form className="login-form" type="submit" onSubmit={onSubmit}>
       <h3>Login to Epicenter</h3>
 
@@ -55,7 +64,8 @@ const Login = () => {
         <NavLink className = 'small-nav' to = "/register">Register</NavLink>
 
       </form>
-     </>
+      <Footer/>
+     </div>
   );
 };
 

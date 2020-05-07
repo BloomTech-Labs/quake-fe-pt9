@@ -2,6 +2,10 @@
   "name": "quake",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+   "npm": "6.13.4",
+   "node": "12.14.1"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

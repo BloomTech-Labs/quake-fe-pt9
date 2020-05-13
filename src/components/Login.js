@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     // axiosWithAuth()
     axios
-      .post("http://localhost:3300/api/users/login", user)
+      .post("http://http://epicentralpt9.herokuapp.com//api/users/login", user)
       .then((res) => {
         console.log("RES", res.data);
         console.log("USER", user);

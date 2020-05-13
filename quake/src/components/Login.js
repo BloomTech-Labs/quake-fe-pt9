@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     // axiosWithAuth()
     axios
-      .post("http://localhost:3300/api/users/login", user)
+      .post("http://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
         console.log("RES", res.data);
         console.log("USER", user);
@@ -50,9 +50,10 @@ const Login = () => {
           onChange={handleInput}
           placeholder="password"
         />
-        <button className = 'enter' type="submit">Enter</button>
+        <button data-testid="EnterButton"
+ className = 'enter' id = 'button' type="submit">Enter</button>
         <h3>Not Registered?</h3>
-        <NavLink className = 'small-nav' to = "/register">Register</NavLink>
+        {/* <NavLink className = 'small-nav' to = "/register">Register</NavLink> */}
 
       </form>
      </>

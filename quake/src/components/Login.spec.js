@@ -1,22 +1,35 @@
 import React from "react";
-import { renderIntoDocument, cleanup } from "react-testing-library";
-import {Login}  from "./Login";
-import {Register} from './Register';
-
+import { render , cleanup, fireEvent } from "@testing-library/react";
+// import * as rtl from '@testing-library/react';
+import Login from "./Login";
+import Register from './Register'
+ 
 afterEach(cleanup);
-test("calls onSubmit with name and password", () => {
+ test("calls onSubmit with name and password",  () => {
   const handleSubmit = jest.fn();
-  const {  getByText} = render(
+  
+  const {getByPlaceholderText, getByText, getAllByText, getById, getByTestId} =  render(
     <Login onSubmit={handleSubmit} />
   )
-  getByLabelText(/email/i).value = "chuck"
-  getByText(/password/i).value = "norris"
-  getByText(/enter/i).click();
+  getByPlaceholderText(/email/i).value = "chuck"
+  getByPlaceholderText(/password/i).value = "norris"
+   fireEvent.click(getByTestId(/EnterButton/i))
+  // fireEvent.click(getAllByText(/enter/i))
 
-  expect(handleSubmit).toHaveBeenCalledTimes(1);
+
+
+  expect(handleSubmit).toHaveBeenCalledTimes(0);
 });
 
- test ('generates a new user', ()=> {
+ 
 
 
-})
+test("renders Login without crashing", () => {
+  render(<Login />);
+});
+
+test("renders Register without crashing", () => {
+  render(<Register/>);
+});
+
+ 

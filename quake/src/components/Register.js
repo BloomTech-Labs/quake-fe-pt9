@@ -27,7 +27,7 @@ const Register = () => {
     e.preventDefault();
     axiosWithAuth()
     // axios
-      .post("http://localhost:3300/api/users/register", userData)
+      .post("http://epicentralpt9.herokuapp.com/api/users/register", userData)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
       })
@@ -37,7 +37,7 @@ const Register = () => {
 
   return (
     <div className = 'reg-div'> 
-    <Header/>
+    {/* <Header/> */}
       <h1>Register</h1>
       <form className = 'reg-form'type="submit" onSubmit={onSubmit}>
         <input
@@ -87,7 +87,7 @@ const Register = () => {
           placeholder="password"
         />
 
-        <button type = 'submit' onSubmit = {onSubmit}>Enter</button>
+        <button data-testid='reg-button'type = 'submit' onSubmit = {onSubmit}>Enter</button>
       </form>
       <Footer/>
       </div>

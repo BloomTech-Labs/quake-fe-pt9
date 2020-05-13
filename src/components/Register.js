@@ -27,7 +27,7 @@ const Register = () => {
     e.preventDefault();
     axiosWithAuth()
     // axios
-      .post("http://localhost:3300/api/users/register", userData)
+      .post("http://http://epicentralpt9.herokuapp.com//register", userData)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
       })

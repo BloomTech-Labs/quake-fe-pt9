@@ -20,39 +20,12 @@ const Home = () => {
       <div className="prepare">
         <div className="p-div">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec
-            ullamcorper diam. Praesent ullamcorper neque sit amet cursus
-            consectetur. Curabitur consequat nec lorem sed pharetra. Quisque
-            pretium urna at pulvinar feugiat. Maecenas nec augue a tellus
-            placerat sollicitudin. Curabitur eu lacus eget magna consequat
-            cursus et vel nulla. Vestibulum vel enim mauris. Maecenas ex arcu,
-            rhoncus at nibh sed, laoreet congue nulla. Ut sit amet lacus nec ex
-            malesuada sollicitudin. Fusce eu maximus erat, ac elementum ligula.
-            Pellentesque in vulputate est. Aliquam vel nunc tempor, convallis
-            quam lobortis, dignissim orci. Nam gravida nisi id felis
-            sollicitudin fringilla. Nunc libero sem, auctor vitae lectus
-            tincidunt, malesuada lobortis erat. Fusce lorem sem, aliquet eget
-            iaculis eget, scelerisque eget diam. Quisque tincidunt aliquet
-            ultrices.
+          With Epicentral you will be able to get the latest updates on earthquakes happening around the world in real time;
+           as well as be able to get up to date information on how to be prepared, and what to do in the event of an earthquake.
           </p>
         </div>
         <div className="p-div">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec
-            ullamcorper diam. Praesent ullamcorper neque sit amet cursus
-            consectetur. Curabitur consequat nec lorem sed pharetra. Quisque
-            pretium urna at pulvinar feugiat. Maecenas nec augue a tellus
-            placerat sollicitudin. Curabitur eu lacus eget magna consequat
-            cursus et vel nulla. Vestibulum vel enim mauris. Maecenas ex arcu,
-            rhoncus at nibh sed, laoreet congue nulla. Ut sit amet lacus nec ex
-            malesuada sollicitudin. Fusce eu maximus erat, ac elementum ligula.
-            Pellentesque in vulputate est. Aliquam vel nunc tempor, convallis
-            quam lobortis, dignissim orci. Nam gravida nisi id felis
-            sollicitudin fringilla. Nunc libero sem, auctor vitae lectus
-            tincidunt, malesuada lobortis erat. Fusce lorem sem, aliquet eget
-            iaculis eget, scelerisque eget diam. Quisque tincidunt aliquet
-            ultrices.
-          </p>
+          
         </div>
       </div>
 

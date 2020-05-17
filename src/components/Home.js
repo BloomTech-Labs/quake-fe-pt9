@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from 'axios';
 import Nav from "./Nav";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -6,7 +7,10 @@ import Login from "./Login";
 import WorldMap from "./WorldMap";
 
 
-const Home = () => {
+const Home = (props) => {
+
+
+  
   return (
     <div className="home">
       <Header/>

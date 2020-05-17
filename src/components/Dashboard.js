@@ -11,17 +11,7 @@ const Dashboard = (props) => {
      const city = localStorage.getItem('city')
      const country = localStorage.getItem('country')
      
-     console.log('PROPS', props)
-      useEffect(()=> {
-
-        const {id} =props.match.params;
-        console.log("ID", id)
-        axios.get(`http://localhost:3300/api/users/${id}`)
-        .then(res=> {
-          console.log('REZZ',id, res.data)
-        })
-
-      }, [])
+     
    return (
 
 

@@ -24,17 +24,18 @@ const Login = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     
-    // axiosWithAuth()
+    axiosWithAuth()
     axios
-     .post('https://localhost:3300/api/users/login',user)
-
-      // .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
+ 
+      .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
         console.log("RES", res);
         console.log("USER", user);
         localStorage.setItem("Authorization", res.data.user.token);
         localStorage.setItem("email", res.data.user.email)
         localStorage.setItem('id',res.data.user.user_id)
+        localStorage.setItem('country', res.data.user.country)
+        localStorage.setItem('city', res.data.user.city)
         
         props.history.push('/dashboard')
        })

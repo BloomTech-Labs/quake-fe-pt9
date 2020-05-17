@@ -24,9 +24,7 @@ const Home = () => {
            as well as be able to get up to date information on how to be prepared, and what to do in the event of an earthquake.
           </p>
         </div>
-        <div className="p-div">
-          
-        </div>
+        
       </div>
 
       <Footer />

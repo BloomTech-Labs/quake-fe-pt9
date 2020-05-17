@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import {NavLink} from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 
 import axios from "axios";
 import Header from "./Header";
-import Footer from "./Footer"
+import Footer from "./Footer";
+import { useHistory } from "react-router-dom";
+import Dashboard from './Dashboard';
+ 
+const Login = (props) => {
+  console.log("PROPS", props)
 
-const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -15,17 +19,18 @@ const Login = () => {
  
   const onSubmit = (e) => {
     e.preventDefault();
-    // axiosWithAuth()
-    axios
-    // .post("http://localhost:3300/api/users/login", user)
+    axiosWithAuth()
+     
 
       .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
-        console.log("RES", res.data);
+        console.log("RES", res);
         console.log("USER", user);
         localStorage.setItem("Authorization", res.data.user.token);
+        localStorage.setItem("email", res.data.user.email)
+        props.history.push('/dashboard')
        })
-      .catch((err) => console.log(err));
+       .catch((err) => console.log(err));
   };
 
   const handleInput = (e) => {

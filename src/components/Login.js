@@ -9,8 +9,7 @@ import { useHistory } from "react-router-dom";
 import Dashboard from './Dashboard';
  
 const Login = (props) => {
-  console.log("PROPS", props)
-
+ 
   const [user, setUser] = useState({
     email: "",
     password: "",

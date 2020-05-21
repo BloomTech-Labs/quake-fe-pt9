@@ -21,6 +21,40 @@
   height: 100%;
 
 }
+
+.what-to-do{
+  background-color: sienna;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+
+}
+
+
+.what-to-do p {
+  color: white;
+}
+
+
+.what-to-do a {
+  color:orange;
+}
+
+.what-to-do li {
+ color: white;
+  margin: 5px;
+}
+
+
+.what-to-do ul {
+  border: 2px solid white;
+  
+  align-content: center;
+  justify-content: center;
+  padding: 40px;
+}
 .reg-form input {
   margin: 20px;
   padding: 5px;

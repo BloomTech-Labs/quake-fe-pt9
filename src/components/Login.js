@@ -28,8 +28,7 @@ const Login = (props) => {
  
       .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
-        console.log("RES", res);
-        console.log("USER", user);
+         console.log("USER", user);
         localStorage.setItem("Authorization", res.data.user.token);
         localStorage.setItem("email", res.data.user.email)
         localStorage.setItem('id',res.data.user.user_id)

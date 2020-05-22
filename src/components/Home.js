@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "./Nav";
 import Header from "./Header";
@@ -6,31 +6,39 @@ import Footer from "./Footer";
 import Login from "./Login";
 import WorldMap from "./WorldMap";
 import WhatToDo from './WhatToDo';
+import Dropdown from './Dropdown'
 
 const Home = (props) => {
+
+  const [fema, setFema] = useState([])
 
   useEffect(()=> {
     axios
     .get(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/Colorado.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
+      `https://www.fema.gov/api/open/v1/FemaRegions 
+
+      `
+       
     )
     .then((res) => {
-      console.log("REZ- STATE", res.data.features[0].center );
+      console.log("REZ- STATE", res.data.FemaRegions );
       // props.setUserCoords(res.data[0] );
+       setFema(res.data.FemaRegions)
     });
-  })
+  },[])
   
    
   return (
     <div className="home">
       <Header />
+      <Dropdown fema = {fema}/>
 
       <div className="img-div">
         <WorldMap />
         {/* <Login /> */}
       </div>
       <h1>Preparedness</h1>
-
+        
       <div className="prepare">
         <div className="p-div">
           <p>

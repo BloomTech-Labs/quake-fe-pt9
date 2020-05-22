@@ -38,7 +38,8 @@ class WorldMap extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://epicentral-app.herokuapp.com/getquakes`).then(res => {
+    axios.get(`https://labspt9-quake-be.herokuapp.com/getquakes`).then(res => {
+      console.log(Date.now());
       console.log(res.data);
       const quakes = res.data;
       this.setState({ quakes });

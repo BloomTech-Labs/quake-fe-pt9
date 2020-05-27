@@ -5,18 +5,22 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Login from "./Login";
 import WorldMap from "./WorldMap";
+import WhatToDo from './WhatToDo';
 
 const Home = (props) => {
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://api.mapbox.com/geocoding/v5/mapbox.places/Austin.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg"
-  //     )
-  //     .then((res) => {
-  //       console.log("REZ", res.data);
-  //     });
-  // }, []);
 
+  useEffect(()=> {
+    axios
+    .get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/Colorado.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
+    )
+    .then((res) => {
+      console.log("REZ- STATE", res.data.features[0].center );
+      // props.setUserCoords(res.data[0] );
+    });
+  })
+  
+   
   return (
     <div className="home">
       <Header />

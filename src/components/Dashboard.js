@@ -21,8 +21,7 @@ const Dashboard = (props) => {
           `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
         )
         .then((res) => {
-          console.log("REZ", res.data.features[0].center);
-          setUserCoords(res.data.features[0].center)
+           setUserCoords(res.data.features[0].center)
         });
     }, []);
      

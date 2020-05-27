@@ -16,6 +16,9 @@ const Nav = () => {
       <NavLink className="navie" to="/contact">
         Contact
       </NavLink>
+      <NavLink className = 'navie' to= '/what-to-do'>
+        What to do in an Earthquake
+        </NavLink>
     </div>
   );
 };

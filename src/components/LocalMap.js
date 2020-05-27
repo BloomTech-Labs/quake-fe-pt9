@@ -3,13 +3,13 @@ import L from "leaflet";
 import { Map, TileLayer, GeoJSON } from "react-leaflet";
 import axios from "axios";
 
-class WorldMap extends Component {
-  constructor() {
+class LocalMap extends Component {
+  constructor(props) {
     super();
     this.state = {
-      lat:0,
-      lng:0,
-      zoom: 1,
+      lat: props.userCoords[1],
+      lng: props.userCoords[0],
+      zoom: 7,
       quakes: {}, // geoJSON data
       magnitude: 4, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
@@ -45,6 +45,18 @@ class WorldMap extends Component {
     });
   }
 
+  componentDidUpdate(prevProps){
+    if(prevProps !== this.props){
+        this.setState({
+            lat: this.props.userCoords[1],
+            lng: this.props.userCoords[0]
+        })
+
+    } 
+    
+  }
+    
+   
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
@@ -65,4 +77,4 @@ class WorldMap extends Component {
   }
 }
 
-export default WorldMap;
+export default LocalMap;

@@ -4,6 +4,7 @@ import Footer from './Footer';
 import WorldMap from './WorldMap';
 import axios from 'axios'
 import LocalMap from './LocalMap';
+import Dropdown from './Dropdown';
 import Search from './Search';
 
 
@@ -23,7 +24,7 @@ const Dashboard = (props) => {
         .then((res) => {
            setUserCoords(res.data.features[0].center)
         });
-    }, []);
+    }, [city]);
      
    
   
@@ -36,6 +37,7 @@ const Dashboard = (props) => {
      <h2>Welcome {email}!</h2>
      <h3>Location:  {city} ,{country}</h3>
      <Search setUserCoords = {setUserCoords}/>
+     {/* <Dropdown setUserCoords= {setUserCoords}/> */}
 
     <LocalMap userCoords = {userCoords}/>
          <Footer/>

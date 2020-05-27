@@ -7,32 +7,23 @@ import Login from "./Login";
 import WorldMap from "./WorldMap";
 import WhatToDo from './WhatToDo';
 import Dropdown from './Dropdown'
+import Dropdown2 from './Dropdown2'
 
 const Home = (props) => {
 
-  const [fema, setFema] = useState([])
-
-  useEffect(()=> {
-    axios
-    .get(
-      `https://www.fema.gov/api/open/v1/FemaRegions 
-
-      `
-       
-    )
-    .then((res) => {
-      console.log("REZ- STATE", res.data.FemaRegions );
-      // props.setUserCoords(res.data[0] );
-       setFema(res.data.FemaRegions)
-    });
-  },[])
+   useEffect(()=> {
+     axios.get(  `https://www.fema.gov/api/open/v1/FemaRegions 
+    
+     `)
+     .then(res=> {console.log("RES",res.data)})
+   })
+  
   
    
   return (
     <div className="home">
       <Header />
-      <Dropdown fema = {fema}/>
-
+      
       <div className="img-div">
         <WorldMap />
         {/* <Login /> */}

@@ -1,23 +1,38 @@
 import React, { useState, useEffect } from "react";
+ import LocalMap from './LocalMap';
 
 const Dropdown = (props) => {
   const [place, setPlace] = useState([]);
 
+  const [userCoords, setUserCoords] = useState([0,0]);
+
+ 
   const [shelter, setShelter] = useState({});
 
   const submitPlace = (e) => {
     e.preventDefault();
+
+    if (shelter.loc) {
+      setUserCoords(shelter.loc.coordinates);
+      console.log('LOC',shelter.loc.coordinates[0])
+     } else {
+      setUserCoords( [0,0]);
+    }
+
     const filtered = props.fema.filter((e) => {
-      if (place === e.city) {
+       if (place === e.city) {
         return e;
       }
     });
 
-    setShelter(filtered[0]);
+    
 
-    console.log("SHELTER", shelter);
-    console.log("GEO", shelter.geometry);
-    console.log("LOC", shelter.loc);
+    setShelter(filtered[0]);
+  
+     console.log("SHELTER", shelter);
+    console.log("COORDS", userCoords);
+    
+    
   };
 
   return (
@@ -27,6 +42,7 @@ const Dropdown = (props) => {
           Fema camps
           <select
             id="place"
+            key ={place}
             value={place}
             onChange={(e) => setPlace(e.target.value)}
             onBlur={(e) => console.log("EHONDA", e.target.value)}
@@ -41,16 +57,17 @@ const Dropdown = (props) => {
           enter
         </button>
       </form>
-    { shelter.loc ? (
-      <div className="fema-info">
-        <h3>{shelter.name}</h3>
-        <h3>{shelter.address} </h3>
-        <h3>{shelter.city}</h3>
-        <h3>{shelter.state}</h3>
-        <h3>{shelter.states}</h3>
-        <p>{shelter.loc.coordinates}</p>
-      </div>
-    ) : null}
+      {shelter.loc ? (
+        <div className="fema-info">
+          <h3>{shelter.name}</h3>
+          <h3>{shelter.address} </h3>
+          <h3>{shelter.city}</h3>
+          <h3>{shelter.state}</h3>
+          <h3>{shelter.states}</h3>
+         </div>
+      ) : null}
+
+      <LocalMap userCoords = {userCoords} />
     </div>
   );
 };

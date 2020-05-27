@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
- import LocalMap from './LocalMap';
 
 const Dropdown = (props) => {
   const [place, setPlace] = useState([]);
 
-  const [userCoords, setUserCoords] = useState([0,0]);
-
- 
   const [shelter, setShelter] = useState({});
 
   const submitPlace = (e) => {
     e.preventDefault();
 
     if (shelter.loc) {
-      setUserCoords(shelter.loc.coordinates);
+      props.setUserCoords(shelter.loc.coordinates);
       console.log('LOC',shelter.loc.coordinates[0])
      } else {
-      setUserCoords( [0,0]);
+      props.setUserCoords([0,0]);
     }
 
     const filtered = props.fema.filter((e) => {
@@ -25,14 +21,14 @@ const Dropdown = (props) => {
       }
     });
 
-    
+
 
     setShelter(filtered[0]);
-  
-     console.log("SHELTER", shelter);
-    console.log("COORDS", userCoords);
-    
-    
+
+    console.log("SHELTER", shelter);
+    console.log("COORDS", props.userCoords);
+
+
   };
 
   return (
@@ -66,8 +62,6 @@ const Dropdown = (props) => {
           <h3>{shelter.states}</h3>
          </div>
       ) : null}
-
-      <LocalMap userCoords = {userCoords} />
     </div>
   );
 };

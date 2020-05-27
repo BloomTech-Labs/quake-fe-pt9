@@ -3,13 +3,13 @@ import L from "leaflet";
 import { Map, TileLayer, GeoJSON } from "react-leaflet";
 import axios from "axios";
 
-class LocalMap extends Component {
+class LeafletMap extends Component {
   constructor(props) {
     super();
     this.state = {
       lat: props.userCoords[1],
       lng: props.userCoords[0],
-      zoom: 7,
+      zoom: 1,
       quakes: {}, // geoJSON data
       magnitude: 4, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
@@ -38,25 +38,20 @@ class LocalMap extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://epicentral-app.herokuapp.com/getquakes`).then(res => {
+    axios.get(`https://labspt9-quake-be.herokuapp.com/getquakes`).then(res => {
       console.log(res.data);
       const quakes = res.data;
       this.setState({ quakes });
     });
   }
 
-  componentDidUpdate(prevProps){
-    if(prevProps !== this.props){
-        this.setState({
-            lat: this.props.userCoords[1],
-            lng: this.props.userCoords[0]
-        })
-
-    } 
-    
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      console.log("Props have changed!");
+      this.setState({lat: this.props.userCoords[1], lng: this.props.userCoords[0], zoom: 10});
+    }
   }
-    
-   
+
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
@@ -77,4 +72,4 @@ class LocalMap extends Component {
   }
 }
 
-export default LocalMap;
+export default LeafletMap;

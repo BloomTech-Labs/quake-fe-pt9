@@ -7,38 +7,29 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useHistory } from "react-router-dom";
 import Dashboard from './Dashboard';
- 
+
 const Login = (props) => {
- 
+  const history = useHistory();
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
-  const [message, setMessage] = useState( 
+  const [message, setMessage] = useState(
     ''
   );
 
- 
   const onSubmit = (e) => {
     e.preventDefault();
-    
-    axiosWithAuth()
+    console.log(user);
     axios
- 
       .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
-         console.log("USER", user);
         localStorage.setItem("Authorization", res.data.user.token);
-        localStorage.setItem("email", res.data.user.email)
-        localStorage.setItem('id',res.data.user.user_id)
-        localStorage.setItem('country', res.data.user.country)
-        localStorage.setItem('city', res.data.user.city)
-        
-        props.history.push('/dashboard')
+        props.setUserData(res.data.user);
+        history.push('/dashboard')
        })
-       .catch((err) =>  setMessage('Wrong password, or email')
-         );
+       .catch((err) =>  setMessage('Wrong password, or email'));
   };
 
   const handleInput = (e) => {

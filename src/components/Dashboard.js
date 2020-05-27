@@ -1,52 +1,38 @@
-import React , { useState , useEffect}from 'react'
-import Header from './Header';
-import Footer from './Footer';
-import WorldMap from './WorldMap';
-import axios from 'axios'
-import LocalMap from './LocalMap';
-import Dropdown from './Dropdown';
-import Search from './Search';
+import React, { useState, useEffect } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import LeafletMap from "./LeafletMap";
+import axios from "axios";
+import Dropdown from "./Dropdown";
+import Search from "./Search";
 
+const Dashboard = props => {
+  const [user, setUser] = useState(props.userData);
 
-const Dashboard = (props) => {
-   
-     const email = localStorage.getItem('email')
-     const city = localStorage.getItem('city')
-     const country = localStorage.getItem('country')
+  useEffect(() => {
+    console.log("user", user);
+    axios
+      .get(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${user.city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
+      )
+      .then(res => {
+        props.setUserCoords(res.data.features[0].center);
+      });
+  }, [user.city]);
 
-     const  [userCoords, setUserCoords] = useState( [0,0])
-
-     useEffect(() => {
-      axios
-        .get(
-          `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
-        )
-        .then((res) => {
-           setUserCoords(res.data.features[0].center)
-        });
-    }, [city]);
-     
-   
-  
-   return (
-
-
-    <div className = 'home'>
-        <Header/>
+  return (
+    <div className="home">
+      <Header />
       <h1>Dashboard</h1>
-     <h2>Welcome {email}!</h2>
-     <h3>Location:  {city} ,{country}</h3>
-     <Search setUserCoords = {setUserCoords}/>
-     {/* <Dropdown setUserCoords= {setUserCoords}/> */}
+      <h2>Welcome {user.email}!</h2>
+      <h3>Location: {user.city}, {user.country}</h3>
+      <Search setUserCoords={props.setUserCoords} />
+      {/* <Dropdown setUserCoords= {setUserCoords}/> */}
 
-    <LocalMap userCoords = {userCoords}/>
-         <Footer/>
+      <LeafletMap userCoords={props.userCoords} />
+      <Footer />
     </div>
-   )
+  );
+};
 
-  
-
-
-}
-
-export default Dashboard
+export default Dashboard;

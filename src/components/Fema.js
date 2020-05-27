@@ -12,8 +12,7 @@ const Fema = (props)=> {
   useEffect(()=> {
     axios.get(`https://www.fema.gov/api/open/v1/FemaRegions`)
     .then((res) => {
-      setFema(res.data.FemaRegions)
-      console.log("STUFF",fema)
+      setFema(res.data.FemaRegions);
     }).catch(err => {
       console.log(err);
     });

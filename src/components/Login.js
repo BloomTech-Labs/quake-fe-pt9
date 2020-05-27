@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
-import {NavLink, Redirect} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import axios from "axios";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useHistory } from "react-router-dom";
-import Dashboard from './Dashboard';
 
 const Login = (props) => {
   const history = useHistory();

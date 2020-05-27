@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Dropdown = (props) => {
   const [place, setPlace] = useState([]);
@@ -16,9 +16,7 @@ const Dropdown = (props) => {
     }
 
     const filtered = props.fema.filter((e) => {
-       if (place === e.city) {
-        return e;
-      }
+       return place === e.city;
     });
 
 

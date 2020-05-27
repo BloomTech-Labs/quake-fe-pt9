@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <h2>copyright 2020 Epicentral inc</h2>
-    </div>
+    </footer>
   );
 };
 

@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Contact from "./components/Contact";
-import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Prepare from './components/Prepare';

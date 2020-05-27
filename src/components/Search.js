@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const Search = (props) => {
@@ -24,7 +24,7 @@ const Search = (props) => {
     e.preventDefault();
     doSearch(place.city);
   };
-  
+
   return (
     <>
       <form type="submit" onSubmit={onSubmit}>

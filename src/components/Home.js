@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import LeafletMap from "./LeafletMap";
-import Prepare from "./Prepare";
-import Dropdown from "./Dropdown";
+import React from "react";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
+import LeafletMap from "./LeafletMap.js";
+import Search from "./Search.js";
 
 const Home = props => {
   return (
     <div className="home">
       <Header />
+      <Search setUserCoords={props.setUserCoords} />
       <LeafletMap userCoords={props.userCoords} />
       <section>
-        <h1>Preparedness</h1>
         <p>
           With Epicentral you will be able to get the latest updates on
           earthquakes happening around the world in real time; as well as be

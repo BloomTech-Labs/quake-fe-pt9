@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import LeafletMap from "./LeafletMap";
 import axios from "axios";
-import Dropdown from "./Dropdown";
 import Search from "./Search";
 
 const Dashboard = props => {
-  const [user, setUser] = useState(props.userData);
-
+  const user = props.userData;
+  // This is where we fetch the coordinates from a city name.
   useEffect(() => {
-    console.log("user", user);
     axios
       .get(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${user.city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
@@ -18,7 +16,7 @@ const Dashboard = props => {
       .then(res => {
         props.setUserCoords(res.data.features[0].center);
       });
-  }, [user.city]);
+  }, [props, user.city]);
 
   return (
     <div className="home">

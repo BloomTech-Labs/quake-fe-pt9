@@ -1,29 +1,44 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import {NavLink} from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 
 import axios from "axios";
 import Header from "./Header";
-import Footer from "./Footer"
-
-const Login = () => {
+import Footer from "./Footer";
+import { useHistory } from "react-router-dom";
+import Dashboard from './Dashboard';
+ 
+const Login = (props) => {
+ 
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
+  const [message, setMessage] = useState( 
+    ''
+  );
+
  
   const onSubmit = (e) => {
     e.preventDefault();
-    // axiosWithAuth()
+    
+    axiosWithAuth()
     axios
-      .post("http://localhost:3300/api/users/login", user)
+ 
+      .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
       .then((res) => {
-        console.log("RES", res.data);
-        console.log("USER", user);
+         console.log("USER", user);
         localStorage.setItem("Authorization", res.data.user.token);
+        localStorage.setItem("email", res.data.user.email)
+        localStorage.setItem('id',res.data.user.user_id)
+        localStorage.setItem('country', res.data.user.country)
+        localStorage.setItem('city', res.data.user.city)
+        
+        props.history.push('/dashboard')
        })
-      .catch((err) => console.log(err));
+       .catch((err) =>  setMessage('Wrong password, or email')
+         );
   };
 
   const handleInput = (e) => {
@@ -59,6 +74,7 @@ const Login = () => {
           placeholder="password"
         />
         <button className = 'enter' type="submit">Enter</button>
+        <h2>{message}</h2>
         <h3>Not Registered?</h3>
         <NavLink className = 'small-nav' to = "/register">Register</NavLink>
 

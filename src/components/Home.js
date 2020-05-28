@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Nav from "./Nav";
 import Header from "./Header";
 import Footer from "./Footer";
 import Login from "./Login";
 import WorldMap from "./WorldMap";
+import WhatToDo from './WhatToDo';
+import Dropdown from './Dropdown'
+import Dropdown2 from './Dropdown2'
 
+const Home = (props) => {
 
-const Home = () => {
+   useEffect(()=> {
+     axios.get(  `https://www.fema.gov/api/open/v1/FemaRegions 
+    
+     `)
+     .then(res=> {console.log("RES",res.data)})
+   })
+  
+  
+   
   return (
     <div className="home">
       <Header />
-
       
 
       <div id="banner">

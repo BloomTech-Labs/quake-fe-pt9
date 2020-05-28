@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from './Header';
 import Footer from './Footer';
+import { useHistory } from "react-router-dom";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-const Register = () => {
+const Register = (props) => {
   const [userData, setUserData] = useState({
     first_name: "",
     last_name: "",
@@ -26,10 +27,15 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axiosWithAuth()
-    // axios
-      .post("http://localhost:3300/api/users/register", userData)
+    
+      .post("https://epicentralpt9.herokuapp.com/api/users/register", userData)
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
+       
+        localStorage.setItem("token", res.data );
+        localStorage.setItem('email', userData.email)
+        localStorage.setItem('city', userData.city)
+        localStorage.setItem('country', userData.country)
+        props.history.push('/dashboard')
       })
       .catch((err) => console.log(err));
     console.log("USER", userData);

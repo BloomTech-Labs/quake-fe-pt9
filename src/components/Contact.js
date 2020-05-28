@@ -6,14 +6,14 @@ import Nav from "./Nav"
 const Contact = () => {
 
 // This is a temporary style to see the content, will be removed once we style component correctly
-  let contactStyle = {
-    background: 'orange',
-    color: 'black'
-  }
+  // let contactStyle = {
+  //   // background: 'orange',
+  //   color: 'black'
+  // }
 
 
   return (
-    <div style={contactStyle}>
+    <div style>
       <Header />
       <h2>(512) 555-4578</h2>
       <h2>ShakeN'Quake@gmail.com</h2>

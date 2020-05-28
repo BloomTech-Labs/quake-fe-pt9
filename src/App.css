@@ -165,7 +165,7 @@ hr {
 
 #menu a:hover, #menu .current_page_item a {
 	text-decoration: none;
-	background: #A0190A;
+	background: #EBB462;
 	box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,.1);
 	border-radius: 5px;
 	color: #FFFFFF;
@@ -330,7 +330,7 @@ hr {
 
 #banner .img-border {
 	height: 500px;
-	border: 20px solid #FFFFFF;
+	border: 20px solid #EBB462;
 }
 
 /* Button Style */
@@ -473,3 +473,6 @@ ul.style1 .first {
   margin: 20px;
   padding: 5px;
 }
+
+/*Sign Up Page*/
+

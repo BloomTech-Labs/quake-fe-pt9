@@ -34,13 +34,12 @@ const Login = () => {
   };
 
 // Temporary style to view content, remove once we style components
-  let loginStyle = {
-    background: 'orange',
-    color: 'black'
-  }
+  // let loginStyle = {
+  //   // background: 'orange',
+  //   color: 'black'
 
   return (
-    < div style={loginStyle}>
+    < div style>
     <Header/>
        <form className="login-form" type="submit" onSubmit={onSubmit}>
       <h3>Login to Epicenter</h3>

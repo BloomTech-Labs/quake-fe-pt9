@@ -39,16 +39,17 @@ class LeafletMap extends Component {
 
   componentDidMount() {
     axios.get(`https://labspt9-quake-be.herokuapp.com/getquakes`).then(res => {
-      console.log(res.data);
-      const quakes = res.data;
-      this.setState({ quakes });
+      this.setState({ quakes: res.data });
     });
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
-      console.log("Props have changed!");
-      this.setState({lat: this.props.userCoords[1], lng: this.props.userCoords[0], zoom: 10});
+      this.setState({
+        lat: this.props.userCoords[1],
+        lng: this.props.userCoords[0],
+        zoom: 10
+      });
     }
   }
 

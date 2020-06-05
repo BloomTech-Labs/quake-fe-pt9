@@ -36,8 +36,7 @@ const Login = props => {
   };
 
   return (
-    <div>
-      <Header />
+    <>
       <h3>Login to Epicenter</h3>
       <form className="login-form" type="submit" onSubmit={onSubmit}>
         <input
@@ -63,8 +62,7 @@ const Login = props => {
           Register
         </NavLink>
       </form>
-      <Footer />
-    </div>
+    </>
   );
 };
 

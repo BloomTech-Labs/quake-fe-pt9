@@ -21,9 +21,11 @@ function App() {
         <Route exact path="/">
           <Home userCoords={userCoords} setUserCoords={setUserCoords} />
         </Route>
-        <Route exact path="/register" component={Register} />
         <Route exact path="/login">
           <Login setUserData={setUserData} />
+        </Route>
+        <Route exact path="/register">
+          <Register setUserData={setUserData} />
         </Route>
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/dashboard">

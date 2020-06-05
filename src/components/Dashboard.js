@@ -16,7 +16,7 @@ const Dashboard = props => {
       .then(res => {
         props.setUserCoords(res.data.features[0].center);
       });
-  }, [props, user.city]);
+  }, [props]);
 
   return (
     <div className="home">
@@ -25,8 +25,6 @@ const Dashboard = props => {
       <h2>Welcome {user.email}!</h2>
       <h3>Location: {user.city}, {user.country}</h3>
       <Search setUserCoords={props.setUserCoords} />
-      {/* <Dropdown setUserCoords= {setUserCoords}/> */}
-
       <LeafletMap userCoords={props.userCoords} />
       <Footer />
     </div>

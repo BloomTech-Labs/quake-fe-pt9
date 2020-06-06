@@ -1,5 +1,7 @@
 import React from "react";
 
+// TODO: Add contact information.
+
 const Footer = () => {
   return (
     <footer className="footer">

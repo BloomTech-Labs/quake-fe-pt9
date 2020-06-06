@@ -13,14 +13,8 @@ const Nav = () => {
       <NavLink className="navie" to="/register">
         Register
       </NavLink>
-      <NavLink className="navie" to="/contact">
-        Contact
-      </NavLink>
       <NavLink className="navie" to="/prepare">
         Prepare
-      </NavLink>
-      <NavLink className="navie" to="/fema">
-        Fema
       </NavLink>
     </div>
   );

@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Prepare from "./components/Prepare";
+import UserContext from './contexts/UserContext';
 
 // import Contact from "./components/Contact"; // move content to footer
 // import Dashboard from "./components/Dashboard"; // replace with profile?
@@ -14,14 +15,18 @@ import Prepare from "./components/Prepare";
 function App() {
 
   const [userCoords, setUserCoords] = useState([0,0]);
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({coords: [0, 0]});
 
   return (
     <div className="App">
       <Router>
+
+        <UserContext.Provider value={{userData, setUserData}} > 
         <Route exact path="/">
           <Home userCoords={userCoords} setUserCoords={setUserCoords} userData={userData} />
         </Route>
+
+
         <Route exact path="/login">
           <Login setUserData={setUserData} />
         </Route>
@@ -30,6 +35,7 @@ function App() {
         </Route>
         <Route exact path="/prepare" component ={Prepare} />
         <Redirect to='/' />
+        </UserContext.Provider>
       </Router>
     </div>
   );

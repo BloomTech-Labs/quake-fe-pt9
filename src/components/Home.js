@@ -1,37 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext} from "react";
 import axios from "axios";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import LeafletMap from "./LeafletMap.js";
 import Search from "./Search.js";
-
+import UserContext from '../contexts/UserContext';
 // TODO: Create a utils file to hold the various axios calls and other helpers?
 
-const Home = props => {
+const Home = () => {
+  const {userData, setUserData} = useContext(UserContext);
+
   useEffect(() => {
-    if (props.userData.city) {
+    if (userData.city) {
       // This is where we fetch the coordinates from a city name.
       axios
         .get(
           // TODO: Hide access token?
-          `https://api.mapbox.com/geocoding/v5/mapbox.places/${props.userData.city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
+          `https://api.mapbox.com/geocoding/v5/mapbox.places/${userData.city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`
         )
         .then(res => {
-          props.setUserCoords(res.data.features[0].center);
+          console.log("RES", res)
+          setUserData({
+            ...userData,
+            coords: res.data.features[0].center
+          });
         });
     }
-  }, [props.userData.city, props]);
+  }, [userData.city]);
 
   return (
     <>
       <Header />
-      {props.userData.email ? (
+      {userData.email ? (
         <p>
-          Welcome {props.userData.email} from {props.userData.city}!
+          Welcome {userData.email} from {userData.city}!
         </p>
       ) : null}
-      <Search setUserCoords={props.setUserCoords} />
-      <LeafletMap userCoords={props.userCoords} />
+      <Search userData={userData} setUserData={setUserData} />
+      <LeafletMap userData={userData} />
       <section>
         <p>
           With Epicentral you will be able to get the latest updates on

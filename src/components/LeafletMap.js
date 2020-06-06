@@ -7,8 +7,8 @@ class LeafletMap extends Component {
   constructor(props) {
     super();
     this.state = {
-      lat: props.userCoords[1],
-      lng: props.userCoords[0],
+      lat: props.userData.coords[1],
+      lng: props.userData.coords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
       magnitude: 5, // minimun magnitude to display on map.

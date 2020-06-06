@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// Set up map context
+
 const Search = (props) => {
   const [place, setPlace] = useState({ city: "" });
 
@@ -9,7 +11,10 @@ const Search = (props) => {
     axios
       .get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?limit=2&access_token=pk.eyJ1IjoicnN3ODg4IiwiYSI6ImNrYWRhZmZ5NTA1eGcycmxkdTRnNWFhbHgifQ.svdNU6YRgTECe5sPaLxeMg`)
       .then((res) => {
-         props.setUserCoords(res.data.features[0].center);
+         props.setUserData({
+          ...props.userData, 
+          coords: res.data.features[0].center
+         });
       });
   };
 

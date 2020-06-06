@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 import axios from "axios";
-import Header from "./Header";
-import Footer from "./Footer";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 const Login = props => {
   const history = useHistory();
@@ -23,7 +19,7 @@ const Login = props => {
       .then(res => {
         localStorage.setItem("Authorization", res.data.user.token);
         props.setUserData(res.data.user);
-        history.push("/dashboard");
+        history.push("/");
       })
       .catch(err => setMessage("Wrong password, or email"));
   };

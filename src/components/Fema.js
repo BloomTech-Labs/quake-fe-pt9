@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Dropdown from './Dropdown';
 import axios from 'axios';
-import Header from './Header';
-import Footer from './Footer';
+import Dropdown from './Dropdown';
 import LeafletMap from './LeafletMap';
 
-const Fema = (props)=> {
-
+const Fema = props => {
   const [fema, setFema] = useState([]);
 
   useEffect(()=> {
@@ -21,10 +18,8 @@ const Fema = (props)=> {
   return (
     <div className='fema'>
       <h1>FEMA</h1>
-      <Header/>
       <Dropdown setUserCoords={props.setUserCoords} fema={fema}/>
       <LeafletMap userCoords={props.userCoords} />
-      <Footer/>
     </div>
   )
 }

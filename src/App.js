@@ -4,22 +4,23 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Contact from "./components/Contact";
 import Home from "./components/Home";
-import Dashboard from "./components/Dashboard";
-import Prepare from './components/Prepare';
-import Fema from './components/Fema'
+import Prepare from "./components/Prepare";
+
+// import Contact from "./components/Contact"; // move content to footer
+// import Dashboard from "./components/Dashboard"; // replace with profile?
+// import Fema from './components/Fema'; // make an option on the map page?
 
 function App() {
 
-  const [userCoords, setUserCoords] = useState([0,0])
+  const [userCoords, setUserCoords] = useState([0,0]);
   const [userData, setUserData] = useState({});
 
   return (
     <div className="App">
       <Router>
         <Route exact path="/">
-          <Home userCoords={userCoords} setUserCoords={setUserCoords} />
+          <Home userCoords={userCoords} setUserCoords={setUserCoords} userData={userData} />
         </Route>
         <Route exact path="/login">
           <Login setUserData={setUserData} />
@@ -27,14 +28,7 @@ function App() {
         <Route exact path="/register">
           <Register setUserData={setUserData} />
         </Route>
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/dashboard">
-          <Dashboard userCoords={userCoords} setUserCoords={setUserCoords} userData={userData} />
-        </Route>
         <Route exact path="/prepare" component ={Prepare} />
-        <Route exact path="/fema">
-          <Fema userCoords={userCoords} setUserCoords={setUserCoords} />
-        </Route>
         <Redirect to='/' />
       </Router>
     </div>

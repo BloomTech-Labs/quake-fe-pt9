@@ -25,7 +25,7 @@ const Register = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.data );
         props.setUserData(userData);
-        history.push('/dashboard')
+        history.push("/")
       })
       .catch((err) => console.log(err));
   };
@@ -33,7 +33,7 @@ const Register = (props) => {
   return (
     <>
       <h1>Register</h1>
-      <form className = 'reg-form'type="submit" onSubmit={onSubmit}>
+      <form className="reg-form" type="submit" onSubmit={onSubmit}>
         <input
           type="text"
           name="email"
@@ -55,7 +55,7 @@ const Register = (props) => {
           onChange={handleInput}
           placeholder="password"
         />
-        <button type = 'submit' onSubmit = {onSubmit}>Enter</button>
+        <button type="submit" onSubmit={onSubmit}>Enter</button>
       </form>
     </>
   );

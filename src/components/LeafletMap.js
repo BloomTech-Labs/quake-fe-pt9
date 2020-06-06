@@ -11,14 +11,14 @@ class LeafletMap extends Component {
       lng: props.userCoords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
-      magnitude: 4, // minimun magnitude to display on map.
+      magnitude: 5, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
         // These are options to be passed to markerStyles().
         radius: 8,
         fillColor: "#f00", // red
         color: "#000",
         weight: 1,
-        opacity: 0.5,
+        opacity: 1,
         fillOpacity: 0.5
       }
     };
@@ -38,9 +38,11 @@ class LeafletMap extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://labspt9-quake-be.herokuapp.com/getquakes`).then(res => {
-      this.setState({ quakes: res.data });
-    });
+    axios
+      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=2w`)
+      .then(res => {
+        this.setState({ quakes: res.data });
+      });
   }
 
   componentDidUpdate(prevProps) {

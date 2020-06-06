@@ -13,15 +13,9 @@ const Nav = () => {
       <NavLink className="navie" to="/register">
         Register
       </NavLink>
-      <NavLink className="navie" to="/contact">
-        Contact
+      <NavLink className="navie" to="/prepare">
+        Prepare
       </NavLink>
-      <NavLink className = 'navie' to= '/what-to-do'>
-        What to do in an Earthquake
-        </NavLink>
-        <NavLink className ='navie' to= '/fema'>
-          Fema
-          </NavLink>
     </div>
   );
 };

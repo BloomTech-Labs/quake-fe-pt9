@@ -1,68 +1,29 @@
 import React, {useState, useEffect} from 'react';
-import FemaMap from './FemaMap';
-import Dropdown from './Dropdown';
 import axios from 'axios';
-import Header from './Header';
-import Footer from './Footer'
- 
-const Fema = (props)=> {
+import Dropdown from './Dropdown';
+import LeafletMap from './LeafletMap';
 
+// TODO: Add to upcoming "Options" component, then remove. RC3
 
-    const [fema, setFema] = useState([]);
-    
+const Fema = props => {
+  const [fema, setFema] = useState([]);
 
-    //2 different ways to fetch the data
+  useEffect(()=> {
+    axios.get(`https://www.fema.gov/api/open/v1/FemaRegions`)
+    .then((res) => {
+      setFema(res.data.FemaRegions);
+    }).catch(err => {
+      console.log(err);
+    });
+  }, [])
 
-    async function getStuff(){
-     
-      const response = await   axios
-      .get(
-        `https://www.fema.gov/api/open/v1/FemaRegions 
-    
-        `
-         
-      )
-      .then(res=> {
-        setFema(res.data.FemaRegions)
-      })
-      return response
-      
-    }
-
-
-
-
-    useEffect(()=> {
-      getStuff()
-      console.log('NEW STUFF', fema)
-    },[])
-
-
-    // useEffect(()=> {
-    //     axios
-    //   .get(
-    //     `https://www.fema.gov/api/open/v1/FemaRegions 
-    
-    //     `
-         
-    //   )
-    //   .then((res) => {
-    //     setFema(res.data.FemaRegions)
-    //       setFema(res.data.FemaRegions)
-    //      console.log("STUFF",fema)
-    //   });
-    //   },[])
-      
-
-
-    return (
-        <div className = 'fema'>
-    <h1>FEMA</h1>
-    <Header/>
-        <Dropdown fema = {fema}/>
-        <Footer/>
-         </div>
-    )
+  return (
+    <div className='fema'>
+      <h1>FEMA</h1>
+      <Dropdown setUserCoords={props.setUserCoords} fema={fema}/>
+      <LeafletMap userCoords={props.userCoords} />
+    </div>
+  )
 }
 
 export default Fema;

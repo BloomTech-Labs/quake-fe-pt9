@@ -19,7 +19,7 @@ class LeafletMap extends Component {
         color: "#000",
         weight: 1,
         opacity: 1,
-        fillOpacity: 0.5
+        fillOpacity: 0.8
       }
     };
     // fn passed to the filter prop of react-leaflets GeoJSON component.
@@ -48,9 +48,9 @@ class LeafletMap extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
       this.setState({
-        lat: this.props.userCoords[1],
-        lng: this.props.userCoords[0],
-        zoom: 10
+        lat: this.props.userData.coords[1],
+        lng: this.props.userData.coords[0],
+        zoom: this.props.userData.zoom
       });
     }
   }

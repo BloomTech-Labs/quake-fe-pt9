@@ -22,7 +22,8 @@ const Home = () => {
           console.log("RES", res)
           setUserData({
             ...userData,
-            coords: res.data.features[0].center
+            coords: res.data.features[0].center,
+            zoom: 10
           });
         });
     }

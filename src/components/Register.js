@@ -3,10 +3,8 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import UserContext from '../contexts/UserContext'
 
-const Register = (props) => {
+const Register = () => {
   const history = useHistory();
-
-
   const  {setUserData}  = useContext(UserContext)
   const [auth, setAuth] = useState({
     password: "",

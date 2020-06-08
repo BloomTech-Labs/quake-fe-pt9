@@ -3,9 +3,9 @@ import axios from "axios";
 import UserContext from '../contexts/UserContext';
 import { NavLink, useHistory } from "react-router-dom";
 
-const Login = props => {
+const Login = () => {
   const history = useHistory();
-  const  {setUserData}  = useContext(UserContext)
+  const  {userData, setUserData}  = useContext(UserContext)
 
   const [auth, setAuth] = useState({
     email: "",
@@ -20,7 +20,7 @@ const Login = props => {
       .post("https://epicentralpt9.herokuapp.com/api/users/login", auth)
       .then(res => {
         localStorage.setItem("Authorization", res.data.user.token);
-       setUserData(res.data.user);
+       setUserData({...userData, ...res.data.user});
         history.push("/");
       })
       .catch(err => setMessage("Wrong password, or email"));

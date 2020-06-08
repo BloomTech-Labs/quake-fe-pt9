@@ -34,7 +34,8 @@ class LeafletMap extends Component {
       options.fillColor = this.dateColor(feature.properties.time);
       return L.circleMarker(latlng, options).bindPopup(
         function(layer) {
-          return feature.title;
+          const time = new Date(feature.properties.time)
+          return `${feature.title} - ${time}`;
         }
       );
     };
@@ -67,7 +68,7 @@ class LeafletMap extends Component {
 
   componentDidMount() {
     axios
-      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=2w`)
+      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=d`)
       .then(res => {
         this.setState({ quakes: res.data });
       });

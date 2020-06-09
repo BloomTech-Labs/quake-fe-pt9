@@ -11,7 +11,7 @@ class LeafletMap extends Component {
       lng: props.userCoords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
-      magnitude: 5, // minimun magnitude to display on map.
+      magnitude: 3, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
         // These are options to be passed to markerStyles().
         radius: 8,
@@ -19,7 +19,7 @@ class LeafletMap extends Component {
         color: "#000",
         weight: 1,
         opacity: 1,
-        fillOpacity: 0.5
+        fillOpacity: 0.8
       }
     };
     // fn passed to the filter prop of react-leaflets GeoJSON component.
@@ -29,17 +29,46 @@ class LeafletMap extends Component {
     // styles fn to pass to pointToLayer() to have the quakes appear as red circles.
     // the .bindPopup() creates a popup for each circle showing the quake titles.
     this.markerStyles = (feature, latlng) => {
-      return L.circleMarker(latlng, this.state.geojsonMarkerOptions).bindPopup(
+      const options = {...this.state.geojsonMarkerOptions};
+      options.radius = this.magRadius(feature.properties.magnitude);
+      options.fillColor = this.dateColor(feature.properties.time);
+      return L.circleMarker(latlng, options).bindPopup(
         function(layer) {
-          return feature.title;
+          const time = new Date(feature.properties.time)
+          return `${feature.title} - ${time}`;
         }
       );
     };
+    // Picks a color based on time between the quake and now.
+    this.dateColor = (time) => {
+      const now = Date.now();
+      if (now - time <= 86400000) { //day
+        return "red";
+      } else if (now - time <= 604800000) { // week
+        return "orange";
+      } else if (now - time <= 2629800000) { // month
+        return "yellow";
+      } else {
+        return "green";
+      }
+    };
+    // Picks a radius based on magnitude.
+    this.magRadius = (mag) => {
+      if (mag <= 4) {
+        return 3;
+      } else if (mag <= 5) {
+        return 5;
+      } else if (mag <= 6) {
+        return 8;
+      } else {
+        return 13;
+      }
+    }
   }
 
   componentDidMount() {
     axios
-      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=2w`)
+      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=d`)
       .then(res => {
         this.setState({ quakes: res.data });
       });

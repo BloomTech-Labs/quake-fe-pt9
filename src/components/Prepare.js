@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Eroute from './Eroute'
 
 const Prepare = () => {
   return (
     <>
       <div className="what-to-do">
         <Header />
+        <Eroute/>
 
         <p>
           An earthquake is a sudden rapid shaking of the ground caused by the

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// Set up map context
+
 const Search = (props) => {
   const [place, setPlace] = useState("");
 

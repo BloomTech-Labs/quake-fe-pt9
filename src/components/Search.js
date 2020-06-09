@@ -50,7 +50,7 @@ const Search = (props) => {
           onChange={handleInput}
           name="place"
           value={place}
-          placeholder="City/Zip"
+          placeholder="City/Postal Code"
         />
         <button type="submit">Enter</button>
       </form>

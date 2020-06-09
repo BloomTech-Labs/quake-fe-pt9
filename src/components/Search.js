@@ -25,11 +25,9 @@ const Search = (props) => {
   };
 
   const zoom = (placeType) => {
-    if (placeType === "place") {
+    if (placeType === "place" || placeType === "postcode") {
       return 10;
-    } else if (placeType === "region") {
-      return 6;
-    } else if (placeType === "country") {
+    } else if (placeType === "region" || placeType === "country") {
       return 6;
     } else {
       return 1;

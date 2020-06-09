@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import UserContext from '../contexts/UserContext'
 
-const Register = (props) => {
+const Register = () => {
   const history = useHistory();
-
-  const [userData, setUserData] = useState({
+  const  {setUserData}  = useContext(UserContext)
+  const [auth, setAuth] = useState({
     password: "",
     email: "",
     city: "",
   });
 
   const handleInput = (e) => {
-    setUserData({
-      ...userData,
+    setAuth({
+      ...auth,
       [e.target.name]: e.target.value,
     });
   };
@@ -21,10 +22,10 @@ const Register = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://epicentralpt9.herokuapp.com/api/users/register", userData)
+      .post("https://epicentralpt9.herokuapp.com/api/users/register", auth)
       .then((res) => {
         localStorage.setItem("token", res.data );
-        props.setUserData(userData);
+         setUserData(auth);
         history.push("/")
       })
       .catch((err) => console.log(err));
@@ -38,19 +39,19 @@ const Register = (props) => {
           type="text"
           name="email"
           onChange={handleInput}
-          value={userData.email}
+          value={auth.email}
           placeholder="email"
         />
         <input
           type="text"
           name="city"
           onChange={handleInput}
-          value={userData.city}
+          value={auth.city}
           placeholder="city"
         />
         <input
           type="password"
-          value={userData.password}
+          value={auth.password}
           name="password"
           onChange={handleInput}
           placeholder="password"

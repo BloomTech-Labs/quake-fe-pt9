@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import axios from "axios";
+import UserContext from '../contexts/UserContext';
 import { NavLink, useHistory } from "react-router-dom";
 
-const Login = props => {
+const Login = () => {
   const history = useHistory();
+  const  {userData, setUserData}  = useContext(UserContext)
 
-  const [user, setUser] = useState({
+  const [auth, setAuth] = useState({
     email: "",
     password: ""
   });
@@ -15,18 +17,18 @@ const Login = props => {
   const onSubmit = e => {
     e.preventDefault();
     axios
-      .post("https://epicentralpt9.herokuapp.com/api/users/login", user)
+      .post("https://epicentralpt9.herokuapp.com/api/users/login", auth)
       .then(res => {
         localStorage.setItem("Authorization", res.data.user.token);
-        props.setUserData(res.data.user);
+       setUserData({...userData, ...res.data.user});
         history.push("/");
       })
       .catch(err => setMessage("Wrong password, or email"));
   };
 
   const handleInput = e => {
-    setUser({
-      ...user,
+   setAuth({
+      ...auth,
       [e.target.name]: e.target.value
     });
   };
@@ -37,14 +39,14 @@ const Login = props => {
       <form className="login-form" type="submit" onSubmit={onSubmit}>
         <input
           type="text"
-          value={user.email}
+          value={auth.email}
           onChange={handleInput}
           name="email"
           placeholder="email"
         />
         <input
           type="password"
-          value={user.password}
+          value={auth.password}
           name="password"
           onChange={handleInput}
           placeholder="password"

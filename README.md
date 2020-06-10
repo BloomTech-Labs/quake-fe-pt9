@@ -22,8 +22,10 @@ https://epicentralpt9.herokuapp.com/
 [Denise Chaloupka](https://github.com/DeniseChaloupka)                                        |         [Joshua Daley](https://github.com/)                                        |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
 [<img src="https://avatars1.githubusercontent.com/u/12163086?s=460&u=97c1ecc3ea7872a33d90d563ba7a0dc4088cf5b2&v=4" width = "200" />](https://github.com/garybot
-[<img src="https://ca.slack-edge.com/ESZCHB482-W012JHQBSHG-4cdb46c2dfb9-72" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
+[<img src="https://ca.slack-edge.com/ESZCHB482-W012JHQBSHG-4cdb46c2dfb9-72" width = "200" />](https://github.com/RyanSWest)                       |                      
+[<img src="https://ca.slack-edge.com/ESZCHB482-W0138D1DZ0Q-37a2a49c4e05-512" width = "200" />](https://github.com/JJAleman
+[<img src=https://ca.slack-edge.com/ESZCHB482-W012JHQ5UBU-b25d37e15ff3-512" width = "200" />](https://github.com/DeniseChaloupka)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
+[<img src="https://ca.slack-edge.com/ESZCHB482-W0123RMBDB9-1b38516443df-512"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
 
 <br>
@@ -43,15 +45,18 @@ https://epicentralpt9.herokuapp.com/
 
 1️⃣ [Trello Board](🚫add link to trello board here)
 
+https://trello.com/b/Ja41ROfX/quake
 1️⃣ [Product Canvas](🚫add link to product canvas here)
+https://www.notion.so/048af081122f4ab1bfc4b5203cb59bcf?v=0202f0145e3a494e8ce94dcb8e730bb8
 
 1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
 
 🚫 Replace lorem ipsum with a description of your project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   With Epicentral you will be able to get the latest updates on
+          earthquakes happening around the world in real time; as well as be
+          able to get up to date information on how to be prepared, and what to
+          do in the event of an earthquake.
 
 
 ### 4️⃣ Key Features
@@ -67,35 +72,38 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 ### Front end built using:
 
 #### _Front end framework goes here_
+React
 
 🚫 Why did you choose this framework?
 
--    point one
--    point two
--    point three
--    point four
+-    point one Can fetch data from an API using axios
+-    point two  Allows users to Login and register easily
+-    point three  Can render map data
+-    point four  
 
 🚫List the rest of the front end features and libraries in the same format as the framework above.
 
-#### Front end deployed to `🚫insert service here`
+#### Front end deployed to ` `
 
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end](https://epicentralpt9.herokuapp.com) built using:
 
-#### 🚫 back end framework goes here
+#### nodeJs, postgresql
 
--    point one
--    point two
--    point three
+-    point one - can store user data
+-    point two - can do many to many relationships in SQL
+-    point three- can update user data
 
 🚫 List the rest of the back end end features and libraries in the same format as the framework above
 
 # APIs
 
 ## 2️⃣ Authentication API here
+https://epicentralpt9.herokuapp.com/api/users/login
+
 
 🚫Replace text below with a description of the API
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+Allows the user to be verified when logging in.
 
 ## 2️⃣ Payment API here
 
@@ -149,7 +157,7 @@ In order for the app to function correctly, the user must set up their own envir
 
 # 4️⃣ Testing
 
-🚫Document what you used for testing and why
+Jest, supertest
 
 # 4️⃣ Installation Instructions
 

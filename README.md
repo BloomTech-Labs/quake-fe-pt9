@@ -26,7 +26,7 @@ https://epicentralpt9.herokuapp.com/
 [<img src="https://ca.slack-edge.com/ESZCHB482-W012JHQBSHG-4cdb46c2dfb9-72" width = "200" />](https://github.com/RyanSWest    
                    |                      
 [<img src="https://ca.slack-edge.com/ESZCHB482-W0138D1DZ0Q-37a2a49c4e05-512" width = "200" />](https://github.com/JJAleman
-[<img src= "https://ca.slack-edge.com/ESZCHB482-W0138D1DZ0Q-37a2a49c4e05-512" width = "200" />](https://github.com/DeniseChaloupka
+[<img src= "https://ca.slack-edge.com/ESZCHB482-W012JHQ5UBU-b25d37e15ff3-512" width = "200" />](https://github.com/DeniseChaloupka
  
 
  

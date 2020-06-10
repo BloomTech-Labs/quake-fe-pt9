@@ -20,11 +20,16 @@ https://epicentralpt9.herokuapp.com/
 [Ryan West](https://github.com/RyanSWest)
  [Juan Aleman](https://github.com/JJAleman)
 [Denise Chaloupka](https://github.com/DeniseChaloupka)                                        |         [Joshua Daley](https://github.com/)                                        |
-| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+ 
 [<img src="https://avatars1.githubusercontent.com/u/12163086?s=460&u=97c1ecc3ea7872a33d90d563ba7a0dc4088cf5b2&v=4" width = "200" />](https://github.com/garybot
-[<img src="https://ca.slack-edge.com/ESZCHB482-W012JHQBSHG-4cdb46c2dfb9-72" width = "200" />](https://github.com/RyanSWest)                       |                      
+
+[<img src="https://ca.slack-edge.com/ESZCHB482-W012JHQBSHG-4cdb46c2dfb9-72" width = "200" />](https://github.com/RyanSWest    
+                   |                      
 [<img src="https://ca.slack-edge.com/ESZCHB482-W0138D1DZ0Q-37a2a49c4e05-512" width = "200" />](https://github.com/JJAleman
-[<img src=https://ca.slack-edge.com/ESZCHB482-W012JHQ5UBU-b25d37e15ff3-512" width = "200" />](https://github.com/DeniseChaloupka)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
+[<img src= "https://ca.slack-edge.com/ESZCHB482-W0138D1DZ0Q-37a2a49c4e05-512" width = "200" />](https://github.com/DeniseChaloupka
+ 
+
+ 
 [<img src="https://ca.slack-edge.com/ESZCHB482-W0123RMBDB9-1b38516443df-512"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
 

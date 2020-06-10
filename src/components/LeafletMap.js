@@ -11,7 +11,7 @@ class LeafletMap extends Component {
       lng: props.userData.coords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
-      magnitude: 3, // minimun magnitude to display on map.
+      magnitude: 2.5, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
         // These are options to be passed to markerStyles().
         radius: 8,
@@ -46,9 +46,9 @@ class LeafletMap extends Component {
         return "red";
       } else if (now - time <= 604800000) { // week
         return "orange";
-      } else if (now - time <= 2629800000) { // month
+      } else if (now - time <= 2629800000 / 2) { // two weeks
         return "yellow";
-      } else {
+      } else { // over two weeks
         return "green";
       }
     };
@@ -68,7 +68,7 @@ class LeafletMap extends Component {
 
   componentDidMount() {
     axios
-      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=d`)
+      .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=m`)
       .then(res => {
         this.setState({ quakes: res.data });
       });

@@ -20,7 +20,7 @@ const Login = () => {
       .post("https://epicentralpt9.herokuapp.com/api/auth/login", auth)
       .then(res => {
         localStorage.setItem("Authorization", res.data.user.token);
-       setUserData({...userData, ...res.data.user});
+        setUserData({...userData, ...res.data.user});
         history.push("/");
       })
       .catch(err => setMessage("Wrong password, or email"));

@@ -22,10 +22,10 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://epicentralpt9.herokuapp.com/api/users/register", auth)
+      .post("https://epicentralpt9.herokuapp.com/api/auth/register", auth)
       .then((res) => {
         localStorage.setItem("token", res.data );
-         setUserData(auth);
+        setUserData({email: auth.email, city: auth.city});
         history.push("/")
       })
       .catch((err) => console.log(err));

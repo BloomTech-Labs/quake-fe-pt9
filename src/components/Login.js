@@ -19,11 +19,14 @@ const Login = () => {
     axios
       .post("https://epicentralpt9.herokuapp.com/api/auth/login", auth)
       .then(res => {
-        localStorage.setItem("Authorization", res.data.user.token);
-        setUserData({...userData, ...res.data.user});
+        localStorage.setItem("Authorization", res.token);
+        setUserData({...userData, ...res.user});
         history.push("/");
       })
-      .catch(err => setMessage("Wrong password, or email"));
+      .catch(err => {
+        console.log(err);
+        setMessage("Wrong password, or email");
+      });
   };
 
   const handleInput = e => {

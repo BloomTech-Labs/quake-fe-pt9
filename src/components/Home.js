@@ -12,6 +12,7 @@ const Home = () => {
   const {userData, setUserData} = useContext(UserContext);
 
   useEffect(() => {
+    console.log(userData)
     if (userData.city) {
       // This is where we fetch the coordinates from a city name.
       axios

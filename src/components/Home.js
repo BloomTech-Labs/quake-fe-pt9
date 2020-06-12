@@ -5,6 +5,7 @@ import Footer from "./Footer.js";
 import LeafletMap from "./LeafletMap.js";
 import Search from "./Search.js";
 import UserContext from '../contexts/UserContext';
+import Legend from './Legend.js';
 // TODO: Create a utils file to hold the various axios calls and other helpers?
 
 const Home = () => {
@@ -39,6 +40,7 @@ const Home = () => {
       ) : null}
       <Search userData={userData} setUserData={setUserData} />
       <LeafletMap userData={userData} />
+      <Legend />
       <section>
         <p>
           With Epicentral you will be able to get the latest updates on

@@ -1,0 +1,79 @@
+.legend {
+  margin: 20px auto;
+  padding: 10px;
+  width: 800px;
+  border: solid 2px black
+}
+.legend h2 {
+  margin: 0 auto;
+}
+div {
+  margin-top: 10px;
+  text-align: center;
+}
+.mag-below-4 {
+  margin: 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: ivory;
+  width: 8px;
+  height: 8px;
+}
+
+.mag-below-5 {
+  margin: 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: ivory;
+  width: 12px;
+  height: 12px;
+}
+.mag-below-6 {
+  margin: 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: ivory;
+  width: 18px;
+  height: 18px;
+}
+.mag-above-6 {
+  margin: 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: ivory;
+  width: 27px;
+  height: 27px;
+}
+
+.red {
+  margin: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 60px;
+  background-color: red;
+}
+.orange {
+  margin: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 60px;
+  background-color: orange;
+}
+.yellow {
+  margin: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 60px;
+  background-color: yellow;
+}
+.green {
+  margin: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 60px;
+  background-color: green;
+}

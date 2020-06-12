@@ -19,8 +19,9 @@ const Login = () => {
     axios
       .post("https://epicentralpt9.herokuapp.com/api/auth/login", auth)
       .then(res => {
-        localStorage.setItem("Authorization", res.token);
-        setUserData({...userData, ...res.user});
+        console.log("res", res);
+        localStorage.setItem("Authorization", res.data.token);
+        setUserData({...userData, ...res.data.user});
         history.push("/");
       })
       .catch(err => {

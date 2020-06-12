@@ -24,8 +24,8 @@ const Register = () => {
     axios
       .post("https://epicentralpt9.herokuapp.com/api/auth/register", auth)
       .then((res) => {
-        localStorage.setItem("token", res.token );
-        setUserData({...res.user, coords: [0,0]});
+        localStorage.setItem("token", res.data.token );
+        setUserData({...res.data.user, coords: [0,0]});
         history.push("/")
       })
       .catch((err) => console.log(err));

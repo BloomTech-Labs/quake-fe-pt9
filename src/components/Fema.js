@@ -21,7 +21,7 @@ const Fema = props => {
     <div className='fema'>
       <h1>FEMA</h1>
       <Dropdown setUserCoords={props.setUserCoords} fema={fema}/>
-      <LeafletMap userCoords={props.userCoords} />
+      <LeafletMap userCoords={props.userCoords} fema = {fema}/>
     </div>
   )
 }

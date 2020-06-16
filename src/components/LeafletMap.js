@@ -11,6 +11,7 @@ class LeafletMap extends Component {
       lng: props.userData.coords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
+      fema: {},
       magnitude: 5, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
         // These are options to be passed to markerStyles().
@@ -36,13 +37,25 @@ class LeafletMap extends Component {
       );
     };
   }
-
+ 
   componentDidMount() {
     axios
       .get(`https://labspt9-quake-be.herokuapp.com/getquakes?mag=${this.state.magnitude}&date=2w`)
       .then(res => {
         this.setState({ quakes: res.data });
-      });
+
+        axios.get(`https://www.fema.gov/api/open/v1/FemaRegions`)
+        .then(res=> {
+          this.setState({fema: res.data.FemaRegions})
+          console.log('FEMA INFO', this.state.fema )
+        })
+
+
+       });
+
+      
+       
+       
   }
 
   componentDidUpdate(prevProps) {
@@ -56,6 +69,7 @@ class LeafletMap extends Component {
   }
 
   render() {
+ 
     const position = [this.state.lat, this.state.lng];
     return (
       <Map className="map" center={position} zoom={this.state.zoom}>

@@ -16,10 +16,10 @@ https://epicentralpt9.herokuapp.com/
 
 🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
-|[Gary Porter](https://github.com/garybot)                                        |          
+|[Gary Porter](https://github.com/garybot)                                                 
 [Ryan West](https://github.com/RyanSWest)
  [Juan Aleman](https://github.com/JJAleman)
-[Denise Chaloupka](https://github.com/DeniseChaloupka)                                        |         [Joshua Daley](https://github.com/)                                        |
+[Denise Chaloupka](https://github.com/DeniseChaloupka)                                                        [Joshua Daley](https://github.com/grizzlybrodams)                                        
  
 [<img src="https://avatars1.githubusercontent.com/u/12163086?s=460&u=97c1ecc3ea7872a33d90d563ba7a0dc4088cf5b2&v=4" width = "200" />](https://github.com/garybot
 
@@ -215,4 +215,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫_link to your backend readme here_) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/quake-be-pt9/blob/master/README.md) for details on the backend of our project.

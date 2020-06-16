@@ -17,8 +17,9 @@ const Login = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://epicentralpt9.herokuapp.com/api/users/login", auth)
+      .post("https://epicentralpt9.herokuapp.com/api/auth/login", auth)
       .then((res) => {
+        console.log('LOGIN RES', res.data)
         localStorage.setItem("Authorization", res.data.user.token);
         setUserData({ ...userData, ...res.data.user });
         history.push("/");

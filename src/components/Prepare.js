@@ -20,7 +20,7 @@ const Prepare = () => {
           Rico and the Mississippi Valley.
         </p>
         <h2>What to do in an Earthquake</h2>
-        <p>If an earthquake happens protect yourself right away. </p>
+        <p>If an earthquake happens protect yourself right away! </p>
         <ul>
           <li>
             If you are in a car pull over and stop. Set your parking brake.

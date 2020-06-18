@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import UserContext from '../contexts/UserContext'
+import UserContext from '../contexts/UserContext';
+import Header from './Header'
 
 const Register = () => {
   const history = useHistory();
@@ -33,6 +34,7 @@ const Register = () => {
 
   return (
     <>
+    <Header/>
       <h1>Register</h1>
       <form className="reg-form" type="submit" onSubmit={onSubmit}>
         <input

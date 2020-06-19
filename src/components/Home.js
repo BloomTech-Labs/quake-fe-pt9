@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import LeafletMap from "./LeafletMap.js";
+import Legend from "./Legend.js";
 import Search from "./Search.js";
 import UserContext from '../contexts/UserContext';
 import Legend from './Legend.js';

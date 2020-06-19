@@ -2,6 +2,7 @@ import React, { useState, useContext} from "react";
 import axios from "axios";
 import UserContext from '../contexts/UserContext';
 import { NavLink, useHistory } from "react-router-dom";
+import Header from './Header';
 
 const Login = () => {
   const history = useHistory();
@@ -39,6 +40,7 @@ const Login = () => {
 
   return (
     <>
+    <Header/>
       <h3>Login to Epicenter</h3>
       <form className="login-form" type="submit" onSubmit={onSubmit}>
         <input

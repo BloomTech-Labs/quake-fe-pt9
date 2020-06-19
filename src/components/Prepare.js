@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Eroute from './Eroute'
 
 const Prepare = () => {
   return (
     <>
       <div className="what-to-do">
         <Header />
-
+        <Eroute/>
+          <h2>What is an Earthquake?</h2>
         <p>
           An earthquake is a sudden rapid shaking of the ground caused by the
           shifting of rocks deep underneath the earth’s surface. Earthquakes can
@@ -17,7 +19,8 @@ const Prepare = () => {
           earthquakes include California Oregon Washington Alaska Hawaii Puerto
           Rico and the Mississippi Valley.
         </p>
-        <p>If an earthquake happens protect yourself right away. </p>
+        <h2>What to do in an Earthquake</h2>
+        <p>If an earthquake happens protect yourself right away! </p>
         <ul>
           <li>
             If you are in a car pull over and stop. Set your parking brake.

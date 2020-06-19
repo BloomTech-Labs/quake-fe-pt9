@@ -1,0 +1,20 @@
+
+.reg-div{
+  background-color: sienna;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.reg-form{
+  border: 4px solid orange;
+  padding: 60px;
+  margin: 40px;
+  width:80%;
+  height: 100%;
+
+}
+.reg-form input {
+  margin: 20px;
+  padding: 5px;
+}

@@ -39,8 +39,8 @@ const Home = () => {
           Welcome {userData.email} from {userData.city}!
         </p>
       ) : null}
-      <Search userData={userData} setUserData={setUserData} />
       <LeafletMap userData={userData} />
+      <Search userData={userData} setUserData={setUserData} />
       <Legend />
       <section>
         <p>

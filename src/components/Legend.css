@@ -1,0 +1,78 @@
+.legend {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.legend h2 {
+  margin: 0;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.date div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.date div div {
+  margin: 0 5px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+}
+
+.day {
+  background-color: red;
+}
+
+.week {
+  background-color: orange;
+}
+
+.fortnight {
+  background-color: yellow;
+}
+
+.month {
+  background-color: green;
+}
+
+.mag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mag div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.mag div div {
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+.below-4{
+  height: 8px;
+  width: 8px;
+}
+
+.below-5{
+  height: 12px;
+  width: 12px;
+}
+
+.below-6{
+  height: 18px;
+  width: 18px;
+}
+.above-6{
+  height: 25px;
+  width: 25px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Eroute from './Eroute'
+import "./Prepare.css";
 
 const Prepare = () => {
   return (

@@ -1,0 +1,27 @@
+.what-to-do{
+  background-color: ivory;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.what-to-do p {
+  color: black;
+}
+
+.what-to-do a {
+  color: black;
+}
+
+.what-to-do li {
+ color: black;
+  margin: 5px;
+}
+
+.what-to-do ul {
+  border: 2px solid white;
+  align-content: center;
+  justify-content: center;
+  padding: 40px;
+}

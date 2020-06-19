@@ -6,7 +6,6 @@ import LeafletMap from "./LeafletMap.js";
 import Legend from "./Legend.js";
 import Search from "./Search.js";
 import UserContext from '../contexts/UserContext';
-import Legend from './Legend.js';
 // TODO: Create a utils file to hold the various axios calls and other helpers?
 
 const Home = () => {

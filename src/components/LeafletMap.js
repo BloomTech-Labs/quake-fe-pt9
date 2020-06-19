@@ -79,7 +79,7 @@ class LeafletMap extends Component {
       this.setState({
         lat: this.props.userData.coords[1],
         lng: this.props.userData.coords[0],
-        zoom: this.props.userData.zoom
+        // zoom: this.props.userData.zoom
       });
     }
   }

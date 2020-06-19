@@ -3,6 +3,7 @@ import axios from "axios";
 import UserContext from '../contexts/UserContext';
 import { NavLink, useHistory } from "react-router-dom";
 import Header from './Header';
+import "./Login.css";
 
 const Login = () => {
   const history = useHistory();

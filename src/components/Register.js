@@ -3,6 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import UserContext from '../contexts/UserContext';
 import Header from './Header'
+import "./Register.css";
 
 const Register = () => {
   const history = useHistory();

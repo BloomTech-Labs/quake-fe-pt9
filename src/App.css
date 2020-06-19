@@ -1,121 +1,64 @@
+
+html {
+  font-size: 10px;
+}
+body {
+  background-color: ivory;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
 .App {
   text-align: center;
 }
-.reg-div{
 
-  background-color: sienna;
-  display:flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-.reg-form{
-   /* display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center; */
-  border: 4px solid orange;
-  padding: 60px;
-  margin: 40px;
-  width:80%;
-  height: 100%;
-
+.map {
+  height: 500px;
+  width: 800px;
+  margin: 0 auto;
 }
 
-.what-to-do{
-  background-color: sienna;
-  display:flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-
-
-}
-
-
-.what-to-do p {
-  color: black;
-}
-
-
-.what-to-do a {
-  color:orange;
-}
-
-.what-to-do li {
- color: black;
-  margin: 5px;
-}
-
-
-.what-to-do ul {
-  border: 2px solid white;
-
-  align-content: center;
-  justify-content: center;
-  padding: 40px;
-}
-.reg-form input {
-  margin: 20px;
-  padding: 5px;
-}
-
-.login-form{
-  /* display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center; */
-  border: 4px solid orange;
-  padding: 60px;
-  margin: 40px;
-  width:30%;
-  height: 100%;
-}
- .login-form input{
-   margin: 10px;
-
-}
-  h3{
-  color:black;
-}
-h1{
-  color: black;}
-  h2{
-    color: black;
-  }
- button{
-  border: 4px solid orange;
-  border-radius: 15px;
-  background-color: peru;
-  color: wheat;
-  padding: 7px;
-  width: 50%;
+button{
+  width: 100px;
   margin: 10px;
-  font-size: 20px;
-
+  padding: 5px;
+  background-color: wheat;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 1.6rem;
 }
+
 button:hover{
   background-color: white;
   color: peru;
 }
 
- .home {
-   background-color: sienna;
-   display:flex;
-   flex-direction: column;
- }
- .nav{
-   border: 4px solid orange;
-   padding:15px;
+.nav{
+   width: 30%;
+   /* padding:15px; */
+   /* background-color: wheat; */
    color: white;
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
+   align-items: center;
 
  }
  .navie{
+   border: 2px solid black;
+   text-decoration: none;
+   background-color: wheat;
    color: black;
-   font-size:25px;
-   margin: 10px;
+   padding: 1% 2%;
+   font-size: 2rem;
+   border-radius: 5px;
+   /* margin: 10px; */
+ }
+
+ .navie:hover{
+   background-color: white;
+   color: peru;
  }
  .small-nav{
    color: wheat;
@@ -126,60 +69,9 @@ button:hover{
    color: black;
  }
 
-  .img-div{
-    display:flex;
-    justify-content: center;
-    margin:50px;
-     width:100%;
-     border-radius: 17px;
-     align-content: center;
-
-  }
-
-
-.map {
-  height: 500px;
-  width: 800px;
-  margin: 0 auto;
-}
   .footer{
     color: black;
     font-size:15px;
-    border: 4px solid orange;
+    border: 2px solid black;
     padding:10px;
-  }
-
-  .prepare{
-
-    display:flex;
-     width:100%;
-    justify-content: center;
-    align-content: center;
-  }
- .p-div{
-  display:flex;
-  width: 80%;
-  margin:20px;
-  align-content: center;
-  }
-  .header {
-    border : 3 px solid yellow;
-  }
-
-  .dropdown{
-    display: flex;
-    background-color: orange;
-     align-content: center;
-     flex-direction: column;
-     border: 2px solid white;
-  }
-
-  .fema-button{
-    padding:2px;
-     width:15%
-  }
-
-  .fema{
-    background-color: orange;
-
   }

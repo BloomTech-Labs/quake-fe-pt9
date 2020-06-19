@@ -2,14 +2,11 @@
   margin: 20px auto;
   padding: 10px;
   width: 800px;
-  border: solid 2px black
+  border: solid 2px black;
+  font-size: 1.4rem;
 }
 .legend h2 {
   margin: 0 auto;
-}
-div {
-  margin-top: 10px;
-  text-align: center;
 }
 .mag-below-4 {
   margin: 5px;

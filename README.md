@@ -2,7 +2,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/601b5c9ffdd10f1eae97/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/quake-fe-pt9/test_coverage)
 
 Epicentral
+
 http://epicentral.info/
+
 https://epicentralpt9.herokuapp.com/
 
 |                                       [Gary Porter](https://github.com/garybot)                                        |                                       [Ryan West](https://github.com/RyanSWest)                                        |                                       [Juan Aleman](https://github.com/JJAleman)                                        |                                       [Denise Chaloupka](https://github.com/DeniseChaloupka)                                        |                                       [Joshua Daley](https://github.com/)                                        |

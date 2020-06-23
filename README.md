@@ -1,5 +1,5 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/afddbd6fb90fa22e1cf9/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/quake-fe-pt9/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/afddbd6fb90fa22e1cf9/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/quake-fe-pt9/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/601b5c9ffdd10f1eae97/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/quake-fe-pt9/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/601b5c9ffdd10f1eae97/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/quake-fe-pt9/test_coverage)
 
 Epicentral
 http://epicentral.info/

@@ -4,6 +4,7 @@ html {
 }
 body {
   background-color: ivory;
+  font-size: 1.6rem;
 }
 header {
   display: flex;
@@ -19,7 +20,10 @@ header {
   width: 800px;
   margin: 0 auto;
 }
-
+.description {
+  width: 80%;
+  margin: 0 auto;
+}
 button{
   width: 100px;
   margin: 10px;
@@ -71,7 +75,7 @@ button:hover{
 
   .footer{
     color: black;
-    font-size:15px;
+    font-size: 1rem;
     border: 2px solid black;
     padding:10px;
   }

@@ -17,8 +17,8 @@ const Prepare = () => {
           happen without warning and can result in injuries and damage to
           property and roads. Earthquakes can cause fires tsunamis landslides or
           avalanches. While they can happen anywhere areas at higher risk for
-          earthquakes include California Oregon Washington Alaska Hawaii Puerto
-          Rico and the Mississippi Valley.
+          earthquakes include California, Oregon, Washington, Alaska, Hawaii, Puerto
+          Rico, and the Mississippi Valley.
         </p>
         <h2>What to do in an Earthquake</h2>
         <p>If an earthquake happens protect yourself right away! </p>

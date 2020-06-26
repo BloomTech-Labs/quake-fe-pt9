@@ -42,7 +42,7 @@ const Home = () => {
       <LeafletMap userData={userData} />
       <Search userData={userData} setUserData={setUserData} />
       <Legend />
-      <section>
+      <section className="description">
         <p>
           With Epicentral you will be able to get the latest updates on
           earthquakes happening around the world in real time; as well as be

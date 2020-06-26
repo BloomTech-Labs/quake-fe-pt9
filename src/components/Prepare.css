@@ -1,9 +1,11 @@
 .what-to-do{
+  width: 80%;
+  margin: 0 auto;
   background-color: ivory;
   display:flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  /* align-content: center; */
+  /* justify-content: center; */
 }
 
 .what-to-do p {
@@ -20,8 +22,11 @@
 }
 
 .what-to-do ul {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
   border: 2px solid white;
-  align-content: center;
-  justify-content: center;
-  padding: 40px;
+  /* align-content: center; */
+  /* justify-content: center; */
+  padding: 10px;
 }
